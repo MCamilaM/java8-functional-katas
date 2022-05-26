@@ -19,6 +19,7 @@ public class Kata1 {
                                                   .map(movie -> Map.of(movie.getId(), movie.getTitle()))
                                                   .collect(Collectors.toList());
 
+        System.out.println("Movies:" + moviesNewList);
         return moviesNewList;
     }
 

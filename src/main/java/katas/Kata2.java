@@ -18,8 +18,12 @@ public class Kata2 {
     public static List<Integer> execute() {
         List<Movie> movies = DataUtil.getMovies();
 
-        List<Integer> newListMovies = movies.stream().filter(movie -> movie.getRating() == 5).map(movie -> movie.getId()).collect(Collectors.toList());;
+        List<Integer> newListMovies = movies.stream()
+                .filter(movie -> movie.getRating() == 5)
+                .map(movie -> movie.getId())
+                .collect(Collectors.toList());
 
+        System.out.println("Ids: " + newListMovies);
         return newListMovies;
     }
 }
